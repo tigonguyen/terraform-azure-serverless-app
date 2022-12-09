@@ -1,0 +1,1 @@
+# azure-terraform-of-serverless-app
