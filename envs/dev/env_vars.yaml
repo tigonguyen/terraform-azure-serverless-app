@@ -1,0 +1,7 @@
+# For AppInsight infra type
+appInsightsNames:
+  - "platform"
+  - "frontend"
+  - "backend"
+logAnalyticSKU: "PerGB2018"
+
