@@ -1,11 +1,9 @@
 # For Network infra
-vnetPrefix: 
-  - "10.0.0.0/16"
+vnetPrefix: "10.0.0.0/16"
 subnetPrefixes:
-  storage: 
-    - "10.0.1.0/24"
-  backend: 
-    - "10.0.2.0/24"
+  storage: "10.0.1.0/24"
+  backend: "10.0.2.0/24"
+  engine: "10.0.3.0/24"
 
 # For AppInsight infra type
 appInsightsNames:
@@ -14,3 +12,9 @@ appInsightsNames:
   - "backend"
 logAnalyticSKU: "PerGB2018"
 
+# For Storage infra type
+storageAccountNames:
+  - "pub"
+  - "backend"
+  - "report"
+  - "payment"

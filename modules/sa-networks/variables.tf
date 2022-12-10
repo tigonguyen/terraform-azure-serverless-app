@@ -4,7 +4,7 @@ variable "env" {
 }
 
 variable "vnetPrefix" {
-  type        = list(any)
+  type        = string
   description = "(Required) Prefix of working VNET"
 }
 
