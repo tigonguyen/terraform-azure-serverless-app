@@ -40,10 +40,9 @@ resource "azurerm_storage_account" "main" {
   infrastructure_encryption_enabled = false
 
   network_rules {
-    for_each                   = data.azurerm_subnet.allowed-subnets.id
     default_action             = element(var.storageAccountNames, count.index) == "pub" ? "Allow" : "Deny"
     bypass                     = ["AzureServices"]
-    virtual_network_subnet_ids = each.value
+    virtual_network_subnet_ids = data.azurerm_subnet.allowed-subnets[*].id
   }
 
   tags = {
