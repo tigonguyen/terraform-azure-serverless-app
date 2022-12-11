@@ -20,4 +20,5 @@ resource "azurerm_subnet" "main" {
   resource_group_name  = data.azurerm_resource_group.main.name
   virtual_network_name = azurerm_virtual_network.main.name
   address_prefixes     = [element(values(var.subnetPrefixes), count.index)]
+  service_endpoints    = ["Microsoft.Storage"]
 }

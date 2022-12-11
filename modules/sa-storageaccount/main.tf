@@ -35,14 +35,18 @@ resource "azurerm_storage_account" "main" {
   cross_tenant_replication_enabled  = true
   min_tls_version                   = "TLS1_2"
   shared_access_key_enabled         = true
-  public_network_access_enabled     = element(var.storageAccountNames, count.index) == "pub" ? true : false
+  public_network_access_enabled     = true
   enable_https_traffic_only         = true
   infrastructure_encryption_enabled = false
 
   network_rules {
     default_action             = element(var.storageAccountNames, count.index) == "pub" ? "Allow" : "Deny"
     bypass                     = ["AzureServices"]
-    virtual_network_subnet_ids = data.azurerm_subnet.allowed-subnets[*].id
+    virtual_network_subnet_ids = element(var.storageAccountNames, count.index) == "pub" ? [] : tolist(data.azurerm_subnet.allowed-subnets[*].id)
+  }
+
+  blob_properties {
+    
   }
 
   tags = {
