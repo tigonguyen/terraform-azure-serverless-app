@@ -11,7 +11,7 @@
 | --- | --- | --- | --- |
 | Naming Convention | YES | YES | YES |
 | Modules development | YES | Via Seperated Template Files | YES |
-| Management via a desired state | YES | Complicated and Manually | NO |
+| Storing state | YES | NO | NO |
 | Infrastructure targets | Support On-premises Workloads  | Azure Only | Azure Only |
 | CLI tools | `terraform` | `az deployment` | `az deployment` or `az bicep` |
 | Update current state | [Azure Terrafy](https://github.com/Azure/aztfy) or `terraform import` | YES | YES |
