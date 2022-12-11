@@ -2,7 +2,7 @@
 
 ## Benifits of centralized IaC
 - Naming convention based on each environments workspace
-- No manual changes approach and immutable infrastructure: force to use pipeline for infra deployment only.
+- No manual changes approach and immutable infrastructure: force to use pipeline for infra deployment only
 - Manage resources changes via `state` (Terraform)
 - Modules development: Able to deploy specific resoures on each environments
 
@@ -19,7 +19,11 @@
 
 
 ## Todo
-- [x] Modular and multiple tfstate based on workspaces
+- [x] Modular and multiple tfstate backends based on workspaces
+- [ ] Versioning modules
+- [ ] Working with `state`
+  - [ ] Hiding sensitive data on `state`
+  - [ ] Compare Azure AppService settings between environment via `state`
 - [x] Network module
   - [x] Example VNET (1 VNET per environment)
   - [x] Subnets for each functionality
