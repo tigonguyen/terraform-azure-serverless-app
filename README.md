@@ -5,6 +5,7 @@
 - No manual changes approach and immutable infrastructure: force to use pipeline for infra deployment only
 - Manage resources changes via `state` (Terraform)
 - Modules development: Able to deploy specific resoures on each environments
+- No more manual tasks when deploying new environment
 
 ## Terraform vs. ARM templates vs. Bicep
 | Features | Terraform | ARM Templates | Bicep |
