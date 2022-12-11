@@ -46,7 +46,14 @@ resource "azurerm_storage_account" "main" {
   }
 
   blob_properties {
-    
+    change_feed_enabled = false
+    container_delete_retention_policy {
+      days = 7
+    }
+    delete_retention_policy {
+      days = 7
+    }
+    versioning_enabled = false
   }
 
   tags = {
