@@ -13,6 +13,7 @@ variable "storageAccountNames" {
   type        = list(any)
   default     = ["backend", "pub", "report", "payment"]
   description = "(Optional) List of Storage Account names needed for each services"
+  sensitive   = true
 }
 
 variable "vnetResourceGroup" {

@@ -23,7 +23,7 @@
 - [x] Modular and multiple tfstate backends based on workspaces
 - [ ] Versioning modules
 - [ ] Working with `state`
-  - [ ] Hiding sensitive data on `state`
+  - [x] Hiding sensitive data on `state`
   - [ ] Compare Azure AppService settings between environment via `state`
 - [x] Network module
   - [x] Example VNET (1 VNET per environment)
