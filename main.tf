@@ -15,7 +15,7 @@ module "appinsights" {
 }
 
 module "storageaccount" {
-  source = "./modules/sa-storageaccount"
+  source = "./modules/sa-storageaccounts"
   depends_on = [
     module.network
   ]
